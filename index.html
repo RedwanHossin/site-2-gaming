@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competitive Gaming World</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Wind Of Games</a>
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Games</a></li>
+      <li><a href="#">Tournaments</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="action">
+      <div class="searchBx">
+        <a href="#"><i class='bx bx-search'></i></a>
+        <input type="text" placeholder="Search Games">
+      </div>
+    </div>
+    <div class="toggleMenu"></div>
+  </header>
+
+  <!-- Home Banner -->
+  <div class="banner">
+    <div class="bg">
+      <div class="content">
+        <h2>A New Home For <br>
+          Game Lovers</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla doloribus distinctio dolor mollitia,
+          delectus, vero sunt repellendus soluta fugit quaerat, magnam vel ea cumque accusamus deleniti inventore
+          assumenda rem dolorem!</p>
+        <a href="#" class="btn">Join Now</a>
+      </div>
+      <img src="images/lady1.png">
+    </div>
+  </div>
+
+  <!-- about -->
+  <div class="about">
+    <div class="contentBx">
+      <h2>About Us</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda voluptatibus quidem perferendis
+        delectus suscipit! Sit explicabo tenetur sunt blanditiis reprehenderit possimus dolores ut voluptatibus
+        consequuntur expedita. Perspiciatis, eaque aspernatur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi architecto velit temporibus, dignissimos qui
+        veniam, rem quisquam sequi eius, iure magnam aspernatur quibusdam. Esse quod molestias provident, quo voluptas
+        nihil!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi ratione saepe dolor illum iusto, magnam quo
+        consequuntur laborum dicta facere aliquid nesciunt dolorum, non voluptatem necessitatibus enim fugiat facilis
+        pariatur.
+      </p>
+      <a href="#">Read more</a>
+    </div>
+    <div class="about-img">
+      <img src="images/mac.png">
+    </div>
+  </div>
+  <!-- Games -->
+  <div class="games">
+    <h2>Trending Games</h2>
+    <ul>
+      <li class="list active" data-filter="all">All</li>
+      <li class="list" data-filter="pc">PC Games</li>
+      <li class="list" data-filter="mobile">Mobile Games</li>
+    </ul>
+    <div class="cards">
+      <div class="card">
+        <div class="card-img">
+          <img src="images/warzone.jpg">
+        </div>
+        <div class="content">
+          <h4>Call Of Duty (Warzone)</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing <br><span>$75</span></p>
+            <a href="#">Play Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="images/dmc4jpg.jpg">
+        </div>
+        <div class="content">
+          <h4>Devil May Cry 4</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing <br><span>$10</span></p>
+            <a href="#">Play Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="images/crysis3.jpg">
+        </div>
+        <div class="content">
+          <h4>Crysis 3</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing <br><span>$15</span></p>
+            <a href="#">Play Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="images/messi.jpg">
+        </div>
+        <div class="content">
+          <h4>FIFA 2022</h4>
+          <div class="progress-line"><span></span></div>
+          <div class="info">
+            <p>Pricing <br><span>$23.5</span></p>
+            <a href="#">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    /* Sticky NavBar*/
+    window.addEeventListener('scroll', function () {
+      var header = document.querySelector('header')
+      header.classList.toggle('sticky', window.scrollY > 0)
+    });
+
+    /* Filterable Card */
+    let list = document.querySelectorAll('.list');
+    let list = document.querySelectorAll('.card');
+
+    for(let i=0; i<list.length i++){
+      list[i].addEventListener('click',function(){
+        for(let j=0; j<list.length; j++){
+          list[j].classList.remove('active');
+        }
+        this.classList.add('active');
+
+        let dataFilter = this.getAttribute('data-filter');
+
+        for(let k=0; k<card.length; k++)
+        {
+          card[k].callList.remove('active');
+          card[k].classList.add('hide');
+
+          if(card[k].getAttribute('data-item') == dataFilter || dataFilter =='all'){
+            card[k].callList.remove('hide');
+          card[k].classList.add('active');
+          }
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>
